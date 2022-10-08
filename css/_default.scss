@@ -1,0 +1,273 @@
+@mixin rwd($screen) {
+    @media (min-width: $screen+"px") {
+        @content;
+    }
+}
+
+@mixin scrollbars($size, $foreground-color, $border-radius: 10px, $background-color: mix($foreground-color, white,  30%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+    //   width:  $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+      border-radius:  $border-radius;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+  
+    // For Internet Explorer
+    & {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }
+
+@mixin pad{
+    padding: 50px 0px;
+}
+
+$color-primary: #E96B33;
+$color-secondary: #14994e;
+
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-VariableFont_wght.ttf");
+}
+
+// @font-face {
+//     font-family: 'Font Awesome 5 Regular';
+//     src: url('../webfonts/Font\ Awesome\ 5\ Pro\ Regular.woff2');
+// }
+
+::selection{
+    background-color: $color-primary;
+    color: #fff;
+}
+
+@include scrollbars(0.35rem, lighten($color-primary, 10%), 10px);
+
+body {
+    font-family: "Karla", sans-serif;
+}
+
+a{
+    color: inherit;
+    transition: all 500ms ease;
+
+    &:hover{
+        color: $color-primary;
+        text-decoration: none;
+    }
+
+    &:focus-visible{
+        border: none;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &.text-primary{
+
+        &:hover, &:focus, &:active, &:focus-within{
+            color: darken($color: $color-primary, $amount: 15)!important;
+        }
+    }
+}
+button{
+    &:focus{
+        outline: none;
+    }
+}
+
+.text-primary{
+    color: $color-primary!important;
+
+    // &:hover{
+    //     color: darken($color: $color-primary, $amount: 15)!important;
+    // }
+}
+
+.btn-flip{
+    width: 160px;
+    height: 48px;
+    perspective: 500px;
+
+    a {
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transform: translateZ(-25px);
+        transition: transform 0.3s;
+        cursor: pointer;
+
+        .front{
+            margin: 0;
+            width: 160px;
+            height: 48px;
+            line-height: 48px;
+            position: absolute;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            background-color: $color-primary;
+            color: #fff;
+            transform: rotateY(0) translateZ(24px);
+
+        }
+
+        .back{
+            @extend .front;
+
+            background-color: rgba(255,255,255,0);
+            color: rgba(34,34,34,0);
+            transform: rotateX(90deg) translateZ(24px);
+            overflow: hidden;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: -32%;
+                left: -10%;
+                width: 120%;
+                height: 50%;
+                background: $color-primary;
+                transform: rotate(8deg);
+                transition: all 0.5s ease;
+                transition-delay: 0.15s;
+            }
+        }
+
+        &:hover,&:focus{
+            transform: translateZ(-24px) rotateX(-90deg);
+
+            .front{
+                background: #000;
+                transition: all 0.8s ease;
+            }
+
+            .back{
+                color:$color-primary;
+                transition: color 0.4s linear;
+                background: #fff;
+
+                &::after{
+                    transform: rotate(6deg) translate(100px, -18px);
+                }
+            }
+        }
+      }
+}
+
+.btn-primary {
+    flex: 1;
+    border: 2px solid $color-primary;
+    // text-shadow: 0 3px 5px rgba(#000, 0.25);
+    white-space: nowrap;
+    color: #fff;
+    background: transparent;    
+    position: relative;
+    
+    .text {
+        position: relative;
+        color: transparent;
+        background-image: linear-gradient(
+        90deg,
+        #fff 0%,
+        #fff 50%,
+        $color-primary 50%,
+        $color-primary 100%
+        );
+        background-repeat: repeat;
+        background-size: 200%;
+        background-position: 0 0;
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: background-position 500ms;
+
+        @include rwd(768){
+            background-position: 100% 0;
+        }
+    }
+    
+    &::before {
+      content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-primary;
+        transform-origin: 0 0;
+        transform: scale3d(1, 1, 1);
+        transition: transform 500ms;
+
+        @include rwd(768){
+            transform-origin: 100% 0;
+            transform: scale3d(0, 1, 1);
+        }
+    }
+    
+    &:hover,&:focus,&:not(:disabled):not(.disabled):active,&:not(:disabled):not(.disabled):active:focus {
+        border-color: $color-primary;
+        background-color: transparent;
+
+        .text {
+          background-position: 0 0;
+        }
+    
+        &::before {
+          transform-origin: 0 0;
+          transform: scale3d(1, 1, 1);
+        }
+        
+    }
+    
+}
+
+.btn{
+    &:hover,&:focus,&:not(:disabled):not(.disabled):active,&:not(:disabled):not(.disabled):active:focus{
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.w-xl-auto  {
+    @include rwd(1200){
+        width: auto;
+    }
+}
+
+*[data-type="background"]{
+    background: {
+        size:cover;
+        position: 100%  68.8375px;
+        attachment:fixed;
+    }
+}
+
+@keyframes carousel-caption-animation{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.carousel-caption-animation{
+    animation-name: carousel-caption-animation;
+    animation-duration: 0.5s;
+}
+
+.form-control{
+    &:focus{
+        box-shadow:none;
+        outline:none;
+    }
+}

@@ -1,0 +1,137 @@
+
+
+footer {
+    .call{
+        padding: 30px 0px;
+        text-align: center;
+        background-color: darken($color: #fff, $amount: 5);
+
+        h5{
+            margin-bottom: 0;
+        }
+    }
+
+    .services{
+        padding: 20px 0px;
+        text-align: center;
+        border-bottom: 1px solid darken($color: #fff, $amount: 10);
+
+        p{
+            text-transform: capitalize;
+            margin-bottom: 0rem;
+        }
+    }
+
+    .main-footer{
+        @include pad;
+
+        background-image: url(../images/Map.svg);
+        background-position: 50% 0%;
+        background-repeat: repeat-y;
+
+        @include rwd(576){
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+
+        @include rwd(992){
+            background-position: 50% 0%;
+        }
+
+        ul{
+            li{
+                position: relative;
+                
+                a{
+                    position: relative;
+                    transition: all 500ms ease-in-out;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        right: 0rem;
+                        bottom: -2px;
+                        width: 0;
+                        height: 2px;
+                        opacity: 0;
+                        background-color: $color-primary;
+                        transition: all 500ms ease-in-out;
+                    }
+
+                    &:hover{
+                        margin-left: 0.5rem;
+
+                        &::before{
+                            right: unset;
+                            left: 0;
+                            width: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.title{
+                    margin-bottom: 1rem;
+                }
+
+            }
+        }
+    }
+
+    .social{
+        padding: 30px 0px;
+        background-color: darken($color: #fff, $amount: 5);
+        
+        ul{
+            justify-content: center;
+            align-items: center;
+
+            li{
+                margin: 0px 10px;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    transition-duration: 0ms;
+        
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+        
+                .instagram:hover{
+                    background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);
+                }
+        
+                .twitter:hover{
+                    background:#4198fa;
+                }
+        
+                .facebook:hover{
+                    background:#3b5997;
+                }
+        
+                .pinterest:hover{
+                    background:#c9372d;
+                }
+        
+                .youtube:hover{
+                    background:#e63f28;
+                }
+            }
+        }
+
+        .copyright{
+            text-align: center;
+            margin-top: 1rem;
+
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

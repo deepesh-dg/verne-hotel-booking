@@ -1,0 +1,65 @@
+.upper-heading{
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+
+    i{
+        margin-right: 7px;
+    }
+}
+
+header{
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.111);
+    max-height: 450px;
+    overflow-y: scroll;
+
+    @include rwd(992){
+        overflow-y: visible;
+    }
+
+    .lower-heading{
+        background-color: #fff;
+        
+        .navbar-nav{
+    
+            .nav-item{
+                border-bottom: 3px solid transparent;
+                transition: all 500ms ease;
+    
+                i{
+                    margin-right: 7px;
+                }
+    
+                &.active{
+                    border-color: $color-primary;
+    
+                    .nav-link{
+                        color: $color-primary;
+                    }
+                }
+    
+                &:not(.active){
+    
+                    &:hover{
+                        border-color: $color-primary;
+    
+                        .nav-link{
+                            color: $color-primary;
+                        }
+                    }
+    
+                }
+            }
+    
+            .nav-link{
+                position: relative;
+                font-weight: 700;
+                padding: 20px;
+    
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+    
+}

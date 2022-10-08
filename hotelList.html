@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/hotelList.css" />
+
+    <link rel="icon" href="images/fav-logo.png" type="image/png" sizes="16x16" />
+
+    <title>Booking Ltd – Boutique and luxury hotels and villa</title>
+</head>
+<body>
+    <div class="container-fluid bg-white d-none d-lg-block">
+        <div class="container py-3 upper-heading">
+            <div class="row">
+    
+                <div class="col d-flex align-items-center justify-content-start">
+                    <a href="tel:+55-745-871-456"><i class="fas fa-phone-alt"></i>+55-745-871-456</a>
+                </div>
+    
+                <div class="col d-flex align-items-center justify-content-start justify-content-md-center">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo" class="img-fluid" width="255px"></a>
+                </div>
+    
+                <div class="col d-flex align-items-center justify-content-end">
+                    <div class="btn-flip">
+                        <a href="#">
+                            <div class="front">Login</div>
+                            <div class="back">Login</div>
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <header class="container-fluid bg-white sticky-top">
+        <div class="container lower-heading">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+        
+                <a href="index.html" class="navbar-brand d-lg-none"><img src="images/logo.png" alt="Logo" class="img-fluid" width="188px"></a>
+        
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-head">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div id="nav-head" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-bed"></i>Stays</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-plane-departure"></i>Flights</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="hotelList.html"><i class="fas fa-suitcase-rolling"></i>Flight &plus; Hotel</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-car"></i>Car Rentals</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fab fa-canadian-maple-leaf"></i>Attractions</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-taxi"></i>Airport Taxies</a>
+                    </li>    
+                    </ul>
+                </div>  
+        
+            </nav>
+        </div>
+        
+    </header>
+
+    <section class="lists">
+        <div class="container">
+            <div class="row">
+                <section id="filter-section" class="col-12 col-lg-3 px-0">
+            
+                    <div id="close-space" class="close-space d-lg-none"></div>
+                    
+                    <div class="filter">
+
+                        <div class="close-btn d-lg-none">
+                            <a href="#" data-work="close-filter">
+                                <img src="images/close-btn.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <form id="filter-form" action="" method="GET" class="">
+
+                            <div class="form-group">
+                                <label for="price">Price Per Night</label>
+                                <input type="range" name="price" id="price" min="250" max="10000" class="form-control" value="8000" step="250">
+                                <p class="price">&#8377; <span></span> (137)</p>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="star-ratings">
+                                    <a href="#" class="custom-dropdown-toggle" data-toggle="collapse" data-target="#star-rating-list">
+                                        <i class="fas fa-angle-up"></i>Star Ratings
+                                    </a>
+                                    <div id="star-rating-list" class="collapse show mt-2">
+                                        <label for="5-star" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="5-star" id="5-star" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                5 Star <span>(50)</span>
+                                            </div>
+                                        </label>
+                                        <label for="4-star" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="4-star" id="4-star" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                4 Star &plus; <span>(170)</span>
+                                            </div>
+                                        </label>
+                                        <label for="3-star" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="3-star" id="3-star" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                3 Star &plus; <span>(500)</span>
+                                            </div>
+                                        </label>
+                                        <label for="2-star" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="2-star" id="2-star" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                2 Star &plus; <span>(643)</span>
+                                            </div>
+                                        </label>
+                                        <label for="1-star" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="1-star" id="1-star" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                1 Star &plus; <span>(700)</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="More Filters">
+                                    <h6 style="margin-left: 4px;">Popular Filters</h6>
+                                    <label for="beachfront" class="">
+                                        <div class="checkbox bounce">
+                                            <input type="checkbox" name="beachfront" id="beachfront" class="">
+                                            <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                            BeachFront <span>(50)</span>
+                                        </div>
+                                    </label>
+                                    <label for="homestays" class="">
+                                        <div class="checkbox bounce">
+                                            <input type="checkbox" name="homestays" id="homestays" class="">
+                                            <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                            Homestays <span>(50)</span>
+                                        </div>
+                                    </label>
+                                    <label for="villas" class="">
+                                        <div class="checkbox bounce">
+                                            <input type="checkbox" name="villas" id="villas" class="">
+                                            <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                            Villas <span>(50)</span>
+                                        </div>
+                                    </label>
+                                    <div id="more-filters" class="collapse">
+                                        <label for="resorts" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="resorts" id="resorts" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                Resorts <span>(50)</span>
+                                            </div>
+                                        </label>
+                                        <label for="beach" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="beach" id="beach" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                Beach <span>(50)</span>
+                                            </div>
+                                        </label>
+                                        <label for="luxury-tents" class="">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="luxury-tents" id="luxury-tents" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                Luxury Tents <span>(50)</span>
+                                            </div>
+                                        </label>
+                                        <label for="private-pool" class="mb-2">
+                                            <div class="checkbox bounce">
+                                                <input type="checkbox" name="private-pool" id="private-pool" class="">
+                                                <svg viewBox="0 0 21 21">
+                                                    <polyline points="5 10.75 8.5 14.25 16 6"></polyline>
+                                                </svg>
+                                                Private Pool <span>(50)</span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <a href="#" class="custom-dropdown-toggle collapsed" data-toggle="collapse" data-target="#more-filters">
+                                        <i class="fas fa-angle-up"></i>More Filters
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <span class="text">Apply Filter</span>
+                                </button>
+                            </div>
+    
+                        </form>
+                    </div>
+
+                </section>
+            
+                <section class="col-12 col-lg-9 px-3 px-sm-0">
+                    <div class="book-hotels px-3">
+                        <div class="row sort-div">
+                            <div class="col-6 col-md-4 col-lg-6">
+                                <a href="#" class="filter-button w-100 btn btn-primary d-lg-none" data-target="#filter-section">
+                                    <span class="text"><i class="fas fa-filter"></i> Filters</span>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-lg-3 d-none d-md-block">
+                                <a href="#" class="sort-view btn btn-light bg-white w-100" data-work="sort-view">
+                                    <i class="fas"></i>
+                                    <span>List View</span>
+                                </a>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="sort">
+                                    <form action="" method="GET" class="">
+                                        <select name="sort" id="sort" class="form-control">
+                                            <option value="trending-hotels">Trending Hotels</option>
+                                            <option value="price-low-to-high">Price (Low To High)</option>
+                                            <option value="price-high-to-low">Price (High To Low)</option>
+                                            <option value="customer-ratings">Customer Ratings</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="sort-view-content" class="row">
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-1" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-1.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-1.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-1" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-1" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+                                            
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="hotel-1.html" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-2" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-2.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-2.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-2" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-2" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-3" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-3.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-3.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-3" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-3" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+                                            
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-4" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-4.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-4.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-4" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-4" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-5" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-5.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-5.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-5" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-5" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                            <div class="col-12 col-md-6 hotel-images">
+                                <div class="hotel-box">
+                                    <div class="hotel">
+                                        <div class="p-1 hotel-carousel-parent">
+                                            <div id="hotel-6" class="image carousel slide" data-ride="carousel" data-interval="false">
+                                                
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="images/hotel-list-6.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="images/hotel-list-6.jpg" alt="" class="img-fluid carousel-image">
+                                                    </div>
+                                                </div>
+
+                                                <a class="carousel-control-prev" href="#hotel-6" data-slide="prev">
+                                                    <span class="carousel-control-prev-icon"></span>
+                                                </a>
+                                                <a class="carousel-control-next" href="#hotel-6" data-slide="next">
+                                                    <span class="carousel-control-next-icon"></span>
+                                                </a>
+
+                                                <div class="discount">
+                                                    <span class="h5">45%</span> OFF
+                                                </div>
+
+                                                <div class="favorite">
+                                                    <a href="#">
+                                                        <i class="far fa-heart text-primary" style="transform: scale(1.4);"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <a href="#"><h3 class="">Grand Hyatt Goa</h3></a>
+                                            <p>
+                                                <a href="#" data-placement="bottom" data-toggle="popover" data-trigger="hover" data-content="This star rating is provided to Booking.com by the property and is usually determined by an official hotel rating organization or another third party.">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </a>
+                                            </p>
+
+                                            <div class="customer-ratings">
+                                                <div class="rating-image">
+                                                    9.1 / 10
+                                                </div>
+                                                <div class="rating-title">
+                                                    <h6>Excellent</h6>
+                                                </div>
+                                                <a href="#">(31 reviews)</a>
+                                            </div>
+
+                                            <ul>
+                                                <li><i class="fas fa-wifi"></i> free wifi</li>
+                                                <li><i class="fas fa-swimming-pool"></i> swimming pool</li>
+                                                <li><i class="fas fa-dumbbell"></i> fitness center</li>
+                                                <li><i class="fas fa-utensils"></i> free breakfast</li>
+                                            </ul>
+
+                                            <h6>
+                                                <span data-hover="Last booked 18 minutes ago">
+                                                    Booked 4 times in the last 1 hour
+                                                </span>
+                                            </h6>
+
+                                        </div>
+                                        <div class="book-now">
+                                            <ul>
+                                                <li><i class="fas fa-check-double"></i> free cancellation</li>
+                                                <li><i class="fas fa-check-double"></i> pay @ hotel</li>
+                                            </ul>
+                                            <div class="row">
+                                                <div class="col-6 price-segment">
+                                                    <p class="old-price">&#8377; 3&#44;750</p>
+                                                    <p class="new-price">&#8377; 2&#44;750 <span>/night per person</span></p>
+                                                </div>
+                                                <div class="col-6 view-details">
+                                                    <a href="#" class="btn btn-primary">
+                                                        <span class="text">View Details</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+    
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="call">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-12">
+                        <h5><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;Call a travel specialist on&nbsp;&nbsp; <a href="tel:+55-745-871-456">+55 745 871 456</a></h5>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="services">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-4 col-md-2">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="fas fa-phone-square-alt"></i></h4>
+                            <p>here for you</p>
+                        </a>
+                    </div>
+        
+        
+                    <div class="col-4 col-md-2">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="fas fa-gift"></i></h4>
+                            <p>extras on arrival</p>
+                        </a>
+                    </div>
+        
+        
+                    <div class="col-4 col-md-2">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="fas fa-check"></i></h4>
+                            <p>best price</p>
+                        </a>
+                    </div>
+        
+        
+                    <div class="col-4 col-md-2 mt-3 mt-md-0">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="fas fa-user-tie"></i></h4>
+                            <p>approved hotel</p>
+                        </a>
+                    </div>
+        
+        
+                    <div class="col-4 col-md-2 mt-3 mt-md-0">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="fas fa-american-sign-language-interpreting"></i></h4>
+                            <p>exclusive offers</p>
+                        </a>
+                    </div>
+        
+        
+                    <div class="col-4 col-md-2 mt-3 mt-md-0">
+                        <a href="#">
+                            <h4 class="mb-0 pb-2"><i class="far fa-gem"></i></h4>
+                            <p>new finds</p>
+                        </a>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-footer">
+            <div class="container">
+                <div class="row">
+        
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <ul type="none" class="p-0">
+                            <li class="title"><h5>About Us</h5></li>
+                            <li><a href="#">who we are</a></li>
+                            <li><a href="#">why book with us</a></li>
+                            <li><a href="#">Best-price guarantee</a></li>
+                            <li><a href="#">Reviews from our members</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Our in-house travel team</a></li>
+                            <li><a href="#">Our jetsetting reviewers</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <ul type="none" class="p-0">
+                            <li class="title"><h5>Boutique hotel</h5></li>
+                            <li><a href="#">Beach hotels</a></li>
+                            <li><a href="#">Spa hotels</a></li>
+                            <li><a href="#">City break hotels</a></li>
+                            <li><a href="#">Honeymoon hotels</a></li>
+                            <li><a href="#">Child-friendly hotels</a></li>
+                            <li><a href="#">Hotels with swimming pools</a></li>
+                            <li><a href="#">Ski hotels</a></li>
+                            <li><a href="#">Pet-friendly hotels</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <ul type="none" class="p-0">
+                            <li class="title"><h5>Our top countries</h5></li>
+                            <li><a href="#">England</a></li>
+                            <li><a href="#">Morocco</a></li>
+                            <li><a href="#">Spain</a></li>
+                            <li><a href="#">United States</a></li>
+                            <li><a href="#">Italy</a></li>
+                            <li><a href="#">France</a></li>
+                            <li><a href="#">Portugal</a></li>
+                            <li><a href="#">Greece</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <ul type="none" class="p-0">
+                            <li class="title"><h5>Top destinations</h5></li>
+                            <li><a href="#">Barcelona</a></li>
+                            <li><a href="#">London</a></li>
+                            <li><a href="#">Paris</a></li>
+                            <li><a href="#">Rome</a></li>
+                            <li><a href="#">New York</a></li>
+                            <li><a href="#">Cotswolds</a></li>
+                            <li><a href="#">Santorini</a></li>
+                            <li><a href="#">Marrakech</a></li>
+                        </ul>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+        
+        <div class="social">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        
+                        <ul type="none" class="list-group list-group-horizontal">
+                            <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+        
+                        <div class="copyright">
+                            <p>&copy; Booking Ltd – Boutique and luxury hotels and villa</p>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </footer>
+    
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/font-awesome.js"></script>
+    <script src="js/svgembedder.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/hotel-list.js"></script>
+</body>
+</html>
